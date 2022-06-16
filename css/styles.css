@@ -140,6 +140,11 @@ body {
   color: var(--accent-color);
 }
 
+.current::after {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
 .header-mail {
   font-weight: 500;
   font-size: 14px;
@@ -362,13 +367,13 @@ body {
 }
 
 .whatwedo-overlay {
-  position: relative;
+  /* position: relative; */
   width: 370px;
   height: 294px;
 }
 
 .whatwedo-img1::after {
-  content: 'Десктопные приложения';
+  content: '';
   position: absolute;
   display: block;
   background: rgba(47, 48, 58, 0.8);
@@ -388,6 +393,24 @@ body {
   color: #ffffff;
 
   bottom: 0;
+}
+
+.whatwedo-overlay-text {
+  bottom: 0;
+  position: absolute;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  position: absolute;
+  display: flex;
 }
 
 .whatwedo-img2::after {
