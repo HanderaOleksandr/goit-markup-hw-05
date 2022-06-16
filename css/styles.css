@@ -4,6 +4,7 @@
   --second-main-color: #212121;
   --contact-color: #757575;
   --background-color-color: #2f303a;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -106,11 +107,33 @@ body {
   padding-bottom: 32px;
   padding-top: 32px;
   display: flex;
+
+  position: relative;
+
+  transition: color 250ms;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
 }
 
 .current {
@@ -130,6 +153,8 @@ body {
   display: flex;
 
   align-items: center;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .header-mail:hover,
@@ -157,6 +182,7 @@ body {
   padding-bottom: 32px;
   padding-top: 32px;
   display: flex;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-tel:hover {
@@ -331,6 +357,83 @@ body {
 
 .whatwedo-img {
   margin-right: 30px;
+  height: 294px;
+  position: relative;
+}
+
+.whatwedo-overlay {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
+.whatwedo-img1::after {
+  content: 'Десктопные приложения';
+  position: absolute;
+  display: block;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-align: center;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  bottom: 0;
+}
+
+.whatwedo-img2::after {
+  content: 'Мобильные приложения';
+  position: absolute;
+  display: block;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-align: center;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  bottom: 0;
+}
+
+.whatwedo-img3::after {
+  content: 'Дизайнерские решения';
+  position: absolute;
+  display: block;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-align: center;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  bottom: 0;
 }
 
 /* ---------------Наша команда------------------- */
