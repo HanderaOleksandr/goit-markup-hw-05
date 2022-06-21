@@ -132,9 +132,9 @@ body {
   transition: opacity 250ms var(--timing-function);
 }
 
-.nav-link:hover::after {
+/* .nav-link:hover::after {
   opacity: 1;
-}
+} */
 
 .current {
   color: var(--accent-color);
@@ -372,7 +372,7 @@ body {
   height: 294px;
 }
 
-.whatwedo-img1::after {
+/* .whatwedo-img1::after {
   content: '';
   position: absolute;
   display: block;
@@ -393,9 +393,9 @@ body {
   color: #ffffff;
 
   bottom: 0;
-}
+} */
 
-.whatwedo-overlay-text {
+/* .whatwedo-overlay-text {
   bottom: 0;
   position: absolute;
   font-family: 'Roboto';
@@ -411,9 +411,9 @@ body {
 
   position: absolute;
   display: flex;
-}
+} */
 
-.whatwedo-img2::after {
+/* .whatwedo-img2::after {
   content: 'Мобильные приложения';
   position: absolute;
   display: block;
@@ -434,9 +434,9 @@ body {
   color: #ffffff;
 
   bottom: 0;
-}
+} */
 
-.whatwedo-img3::after {
+/* .whatwedo-img3::after {
   content: 'Дизайнерские решения';
   position: absolute;
   display: block;
@@ -457,6 +457,22 @@ body {
   color: #ffffff;
 
   bottom: 0;
+} */
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  text-transform: uppercase;
+  line-height: 1.14;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* ---------------Наша команда------------------- */
@@ -542,6 +558,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .mate-soc-icon {
@@ -589,10 +607,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .clients-icon {
   fill: #afb1b8;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .clients-item:hover,
@@ -617,8 +639,8 @@ body {
   fill: #2196f3;
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
   fill: #2196f3;
 }
 
@@ -729,6 +751,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .join-icon {
@@ -777,6 +801,8 @@ body {
 
   margin-right: 8px;
   padding: 6px 22px;
+
+  transition: background 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .current-filter-button {
@@ -802,9 +828,9 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--main-color);
+  color: #ffffff;
 
-  background: var(--accent-color);
+  background: #2196f3;
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -871,6 +897,7 @@ body {
   height: 404px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  overflow: hidden;
 }
 
 .ourprojects-item:hover,
@@ -888,3 +915,46 @@ body {
 .project-title {
   padding: 20px 24px;
 }
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+
+.ourprojects-item:hover .project-thumb::before {
+  transform: translateY(0);
+}
+
+/* .project-overlay-text {
+  display: inline-block;
+  position: absolute;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-overlay-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+} */
