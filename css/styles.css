@@ -916,12 +916,8 @@ body {
   padding: 20px 24px;
 }
 
-.project-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.project-thumb::before {
+/* .project-thumb::before {
+  box-sizing: border-box
   display: inline-block;
   content: '';
   position: absolute;
@@ -936,7 +932,8 @@ body {
 
 .ourprojects-item:hover .project-thumb::before {
   transform: translateY(0);
-}
+  box-sizing: border-box
+} */
 
 /* .project-overlay-text {
   display: inline-block;
@@ -958,3 +955,49 @@ body {
 
   color: #ffffff;
 } */
+
+.card {
+  width: 370px;
+  height: 404px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  transition: box-shadow var(--timing-duration) var(--timing-function),
+    border-radius var(--timing-duration) var(--timing-function);
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-top-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+.ourprojects-list li:hover .card-top-text {
+  transform: translateY(0%);
+}
