@@ -110,7 +110,7 @@ body {
 
   position: relative;
 
-  transition: color 250ms;
+  transition: color 250ms var(--timing-function);
 }
 
 .nav-link:hover,
@@ -1013,6 +1013,7 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
